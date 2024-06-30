@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ques</title>
+  </head>
+  <body>
+    <h1>first h1</h1>
+    <h1>second h1</h1>
+    <h2>first h2</h2>
+    <h2>second h2</h2>
+    <h4>first h4</h4>
+    <h4>second h4</h4>
+    <h4>third h4</h4>
+    <h4>fourth h4</h4>
+    <div class="green">first div</div>
+    <div class="red">second div</div>
+    <div class="blue">third div</div>
+    <p class="green">para1</p>
+    <p class="red">para2</p>
+    <p class="blue">para3</p>
+    <hr />
+    <button id="btn1">change h1</button>
+    <button id="btn2">change h2</button>
+    <button id="btn3">change h4</button>
+    <button id="btn4">change green</button>
+    <button id="btn5">change red</button>
+    <button id="btn6">change blue</button>
+  </body>
+</html>
+<script>
+  document.querySelector("#btn1").addEventListener("click", changeh1);
+  function changeh1() {
+    document.querySelector("h1").style.color = "red";
+  }
+
+  document.querySelector("#btn2").addEventListener("click", changeh2);
+  function changeh2() {
+    for (let i = 0; i < document.querySelectorAll("h2").length; i++) {
+      document.querySelectorAll("h2")[i].style.color = "green";
+    }
+  }
+</script>
