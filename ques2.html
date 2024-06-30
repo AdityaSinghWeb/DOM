@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>change</title>
+    <style>
+      #box {
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: 100px;
+        gap: 18px;
+        background-color: blueviolet;
+        justify-content: center;
+        padding: 20px;
+      }
+      #box > div {
+        background-color: teal;
+        font-size: 40px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+    </div>
+  </body>
+</html>
+<script>
+   for(let i=0;i<document.querySelectorAll("#box>div").length;i++){
+    document.querySelectorAll("#box>div")[i].addEventListener("click",change)
+   }
+   function change(){
+     if(event.target.innerText==1){
+        event.target.parentNode.style.backgroundColor = "orange";
+     }
+     else if(event.target.innerText==2){
+        event.target.parentNode.style.backgroundColor="red"
+     }
+     else{
+        event.target.parentNode.style.backgroundColor="yellow"
+     }
+   }
+</script>
