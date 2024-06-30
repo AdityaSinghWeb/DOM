@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert</title>
+  </head>
+  <body>
+    <input type="text" id="name" placeholder="Enter Name" />
+    <input type="email" id="email" placeholder="Enter Email" />
+    <select id="select">
+      <option value="M">Male</option>
+      <option value="F">Female</option>
+      <input type="number" id="num" />
+    <hr>
+      <button id="n">Name</button>
+      <button id="e">Email</button>
+      <button id="g">Gender</button>
+      <button id="nu">Number</button>
+    </select>
+  </body>
+</html>
+<script>
+    document.querySelector("#n").addEventListener("click",name)
+    document.querySelector("#e").addEventListener("click",email)
+    document.querySelector("#g").addEventListener("click",gender)
+    document.querySelector("#nu").addEventListener("click",number)
+
+    function name(){
+        alert(document.querySelector("#name").value)
+    }
+    function email(){
+        alert(document.querySelector("#email").value)
+    }
+    function gender(){
+        alert(document.querySelector("#select").value)
+    }
+    function number(){
+        alert(document.querySelector("#num").value)
+    }
+
+</script>
