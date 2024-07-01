@@ -15,4 +15,29 @@
     <!-- create five buttons with given input -->
 </body>
 </html>
-<style></style>
+<script>
+  let arrofbtn = [
+    { name: "Primary", color: "white", bgcolor: "blue" },
+    { name: "secondary", color: "white", bgcolor: "grey" },
+    { name: "light", color: "white", bgcolor: "red" },
+    { name: "dark", color: "white", bgcolor: "cyan" },
+    { name: "info", color: "black", bgcolor: "yellow" },
+  ];
+  //   using for loop
+  for(let i=0;i<arrofbtn.length;i++){
+    let bag=document.createElement("button")
+    bag.innerText=arrofbtn[i].name
+    bag.style.color=arrofbtn[i].color
+    bag.style.backgroundColor=arrofbtn[i].bgcolor
+    document.querySelector("body").append(bag)
+  }
+
+  //using forEach
+  arrofbtn.forEach(function(el){
+    let box=document.createElement("button")
+    box.innerText=el.name
+    box.style.color=el.color
+    box.style.backgroundColor=el.bgcolor
+    document.querySelector("body").append(box)
+  })
+</script>
