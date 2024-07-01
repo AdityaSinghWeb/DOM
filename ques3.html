@@ -41,4 +41,32 @@
       document.querySelectorAll("h2")[i].style.color = "green";
     }
   }
+
+  document.querySelector("#btn3").addEventListener("click", changeh4);
+  function changeh4() {
+    for (i = 0; i < document.querySelectorAll("h4").length; i++) {
+      document.querySelectorAll("h4")[i].style.color = "blue";
+    }
+  }
+
+  document.querySelector("#btn4").addEventListener("click", change1);
+  function change1() {
+    for (let i = 0; i < document.querySelectorAll(".green").length; i++) {
+      document.querySelectorAll(".green")[i].style.backgroundColor = "green";
+    }
+  }
+
+  document.querySelector("#btn5").addEventListener("click", change2);
+  function change2() {
+    for (let i = 0; i < document.querySelectorAll(".red").length; i++) {
+      document.querySelectorAll(".red")[i].style.backgroundColor = "red";
+    }
+  }
+
+  document.querySelector("#btn6").addEventListener("click", change);
+  function change() {
+    for (let i = 0; i < document.querySelectorAll(".blue").length; i++) {
+      document.querySelectorAll(".blue")[i].style.backgroundColor = "blue";
+    }
+  }
 </script>
