@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ques5</title>
+    <style>
+      #contain {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 20px;
+      }
+      #contain > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #contain > div img:first-child {
+        width: 260px;
+        height: 180px;
+      }
+      h2 + img {
+        width: 120px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contain"></div>
+  </body>
+</html>
+<script>
+  let input = [
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+
+    {
+      image:
+        "https://img-cdn.pixlr.com/image-generator/history/65772796905f29530816ea40/4ca9ba3d-c418-4153-a36a-77f4182236a7/medium.webp",
+      name: "Aman",
+      logo: "https://w7.pngwing.com/pngs/507/140/png-transparent-nike-logo-swoosh-nike-logo-nike-logo-text-sneakers-adidas-thumbnail.png",
+    },
+  ];
+  let res = input.forEach(function (el) {
+    let bag = document.createElement("div");
+    document.querySelector("#contain").append(bag);
+
+    let avt = document.createElement("img");
+    avt.setAttribute("src", el.image);
+
+    let head = document.createElement("h2");
+    head.innerText = el.name;
+
+    let lo = document.createElement("img");
+    lo.setAttribute("src", el.logo);
+
+    bag.append(avt, head, lo);
+  });
+</script>
